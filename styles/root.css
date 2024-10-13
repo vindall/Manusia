@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+  }
+  
+#body{
+    color: #000;
+    font-family: "JetBrains Mono", monospace;
+    text-decoration: none;
+    font-size: 1.5rem;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+Button{
+    padding: 1rem 3rem;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 1.5rem;
+    background-color: transparent;
+    border: 3px solid black;
+}
+
+h3{
+    font-size: 1.4rem;
+}
+
+
+.logo{
+    margin-right: 4rem;
+    object-fit: contain;
+}
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    background: white;
+    display: flex;
+    align-self: center;
+    z-index: 100;
+    border-bottom: 2px solid gray;
+}
+
+.navbar a{
+    color: black;
+    font-weight: 600;
+    text-decoration: none;
+    margin-right: 4rem;
+}
+
+section{
+    display: grid;
+    place-items: center;
+    align-content: center;
+    min-height: 100vh;
+}
+
+@keyframes appear{
+    from{
+        opacity: 0;
+        scale: 0.5;
+    }
+    to{
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+.home, .synopsis, .watch-now, .a, .b, .c, .d, .e, .f{
+    animation: appear forwards;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
+.splash-screen{
+    position: absolute;
+    display: grid;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    z-index: 999;
+    place-items: center;
+    align-items: center;
+    transition: opacity 1s ease;
+}
+
+#logo-splash {
+    position: absolute;
+    animation: fill 0.5s ease forwards 2s;
+  }
+  
+  #logo-splash path:nth-child(1) {
+    stroke-dasharray: 173px;
+    stroke-dashoffset: 173px;
+    animation: line-art 2s ease forwards 0.9s;
+  }
+  #logo-splash path:nth-child(2) {
+    stroke-dasharray: 87px;
+    stroke-dashoffset: 87px;
+    animation: line-art 2s ease forwards 0.6s;
+  }
+  #logo-splash path:nth-child(3) {
+    stroke-dasharray: 169px;
+    stroke-dashoffset: 169px;
+    animation: line-art 2s ease forwards 0.3s;
+  }
+  #logo-splash path:nth-child(4) {
+    stroke-dasharray: 225px;
+    stroke-dashoffset: 225px;
+    animation: line-art 2s ease forwards;
+  }
+  #logo-splash path:nth-child(5) {
+    stroke-dasharray: 337px;
+    stroke-dashoffset: 337px;
+    animation: line-art 2s ease forwards 0.3s;
+  }
+  #logo-splash path:nth-child(6) {
+    stroke-dasharray: 173px;
+    stroke-dashoffset: 173px;
+    animation: line-art 2s ease forwards 0.6s;
+  }
+  #logo-splash path:nth-child(7) {
+    stroke-dasharray: 280px;
+    stroke-dashoffset: 280px;
+    animation: line-art 2s ease forwards 0.9s;
+  }
+
+  @keyframes line-art {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+  
+  @keyframes fill {
+    from {
+      fill: transparent;
+    }
+    to {
+      fill: white;
+    }
+  }
+
+  .display-none{
+    opacity: 0;
+  }

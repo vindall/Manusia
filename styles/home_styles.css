@@ -1,0 +1,38 @@
+
+.home{
+    display: flex;
+    padding: 100px;
+}
+
+.home h1{
+    font-size: 4rem;
+    margin-bottom: 3rem;
+}
+.home_button-box_watch-now{
+    background-color: black;
+    color: white;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+.home_button-box_watch-now:hover{
+    background-color: white;
+    color: black;
+}
+.home_button-box_watch-now:active{
+    background-color: black;
+    color: white;
+}
+
+.home_button-box_learn-more{
+    color: black;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+.home_button-box_learn-more:hover{
+    background-color: black;
+    color: white;
+}
+.home_button-box_learn-more:active{
+    background-color: white;
+    color: black;
+}
